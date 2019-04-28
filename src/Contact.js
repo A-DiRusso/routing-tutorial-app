@@ -1,11 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Contact extends Component {
+class Contact extends React.Component {
+  onSubmit = () => {
+    this.props.history.push('/')
+  }
+
   render() {
     return (
-      <div>
-        
-      </div>
+      <form>
+        <input placeholder="name" type="name" />  
+        <input placeholder="email" type="email" />
+        <button onClick={this.onSubmit}>Submit</button>
+      </form>
     )
   }
 }
+export default Contact;
